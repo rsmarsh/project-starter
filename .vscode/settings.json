@@ -6,6 +6,5 @@
   "telemetry.enableCrashReporter": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "github.gitAuthentication": false
+  }
 }
