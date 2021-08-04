@@ -5,6 +5,9 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   mode: 'development',
+  devServer: {
+    hot: true
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Project Starter - DEV',
