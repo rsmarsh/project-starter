@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss';
 
 const colourList = [
   'white',
@@ -26,7 +27,7 @@ const App = () => {
           setColour(getRandomColour());
         }}
       >
-        Change Colour
+        Change Colours
       </button>
     </div>
   );
