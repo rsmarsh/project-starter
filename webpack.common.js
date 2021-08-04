@@ -1,6 +1,5 @@
 module.exports = {
   entry: './src/index.tsx',
-  target: 'node',
   devtool: 'source-map',
   output: {
     filename: 'bundle.js'
