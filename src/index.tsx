@@ -20,14 +20,14 @@ const App = () => {
   const [bgColour, setColour] = useState('white');
 
   return (
-    <div style={{ backgroundColor: bgColour }}>
+    <div className='main' style={{ backgroundColor: bgColour }}>
       <p>App is running</p>
       <button
         onClick={() => {
           setColour(getRandomColour());
         }}
       >
-        Change Colours
+        Change Colour
       </button>
     </div>
   );
