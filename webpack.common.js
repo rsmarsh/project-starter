@@ -6,7 +6,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
   },
   module: {
     rules: [
@@ -27,6 +27,19 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
         exclude: /node_modules/
+      },
+
+      // SCSS > CSS
+      {
+        test: /\.scss$/,
+        use: [
+          // creates 'style' nodes from JS strings
+          'style-loader',
+          // translates CSS into CommonJS
+          'css-loader',
+          // composes Sass to CSS
+          'sass-loader'
+        ]
       }
     ]
   },
