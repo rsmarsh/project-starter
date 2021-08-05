@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   entry: './src/index.tsx',
   devtool: 'source-map',
@@ -5,7 +7,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css'],
+    alias: {
+      Components: path.resolve(__dirname, 'src/components/')
+    }
   },
   module: {
     rules: [
@@ -41,6 +46,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  plugins: []
+  }
 };

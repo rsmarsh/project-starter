@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "baseUrl": ".",
+    "paths": {
+      "Components*": ["src/components*"]
+    },
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "es6",
-    "target": "ES2021",
+    "target": "esnext",
     "types": ["webpack-env", "node"],
     "jsx": "react",
     "allowJs": true,

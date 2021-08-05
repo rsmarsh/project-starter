@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
+import Button from 'Components/Button';
+
 const colourList = [
   'white',
   'blue',
@@ -27,13 +29,12 @@ const App = () => {
   return (
     <div className='main' style={{ backgroundColor: bgColour }}>
       <p>App is runningsssssss</p>
-      <button
+      <Button
+        label={`Change Colour`}
         onClick={() => {
           setColour(getRandomColour());
         }}
-      >
-        Change Colour
-      </button>
+      />
     </div>
   );
 };
