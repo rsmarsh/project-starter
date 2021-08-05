@@ -2,13 +2,9 @@
 
 ## Never again abandon a project before even making it beyond the 'hello world' stage.
 
----
-
 ## Info
 
 This project uses my preferred configuration, suitable for most React projects. The webpack server is ready to go with a lot of useful tools pre-configured. This project starter was created with minimal feature bloat in mind.
-
----
 
 ## Stack
 
@@ -24,8 +20,6 @@ The following features & libraries are enabled and ready to go out of the box:
 - Jest
 - NPM Scripts
 - VSCode configuration
-
----
 
 ## Usage
 
