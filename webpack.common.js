@@ -4,9 +4,6 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
-  devServer: {
-    hot: false
-  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css']
   },

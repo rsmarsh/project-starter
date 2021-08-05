@@ -14,6 +14,11 @@ const colourList = [
   'orange'
 ];
 
+// enables Hot Modules Replacement
+if (module.hot) {
+  module.hot.accept();
+}
+
 const getRandomColour = () => colourList[Math.floor(Math.random() * colourList.length)];
 
 const App = () => {
@@ -21,7 +26,7 @@ const App = () => {
 
   return (
     <div className='main' style={{ backgroundColor: bgColour }}>
-      <p>App is running</p>
+      <p>App is runningsssssss</p>
       <button
         onClick={() => {
           setColour(getRandomColour());
