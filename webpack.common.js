@@ -7,9 +7,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css', '.svg'],
     alias: {
-      Components: path.resolve(__dirname, 'src/components/')
+      Components: path.resolve(__dirname, 'src/components/'),
+      Assets: path.resolve(__dirname, 'src/assets/')
     }
   },
   module: {
@@ -44,6 +45,12 @@ module.exports = {
           // composes Sass to CSS
           'sass-loader'
         ]
+      },
+
+      // SVG > React component
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
       }
     ]
   }
