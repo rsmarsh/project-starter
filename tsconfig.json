@@ -3,7 +3,8 @@
     "outDir": "./dist/",
     "baseUrl": ".",
     "paths": {
-      "Components*": ["src/components*"]
+      "Components*": ["src/components*"],
+      "Assets*": ["src/assets*"]
     },
     "sourceMap": true,
     "noImplicitAny": true,
