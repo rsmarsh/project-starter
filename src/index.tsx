@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 
 import Button from 'Components/Button';
+import ReactLogo from 'Assets/svg/react-logo.svg';
 
 const colourList = [
   'white',
@@ -28,7 +29,9 @@ const App = () => {
 
   return (
     <div className='main' style={{ backgroundColor: bgColour }}>
-      <p>App is runningsssssss</p>
+      <ReactLogo />
+
+      <p>App is running</p>
       <Button
         label={`Change Colour`}
         onClick={() => {
