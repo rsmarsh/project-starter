@@ -20,6 +20,7 @@ The following features & libraries are enabled and ready to go out of the box:
 - Jest
 - NPM Scripts
 - VSCode configuration
+- SVGR - auto generated React components from SVG files
 
 ## Usage
 
