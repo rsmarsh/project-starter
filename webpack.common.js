@@ -1,4 +1,5 @@
 const path = require('path');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -6,6 +7,8 @@ module.exports = {
   output: {
     filename: 'bundle.js'
   },
+  // converts final ES6 > ES5
+  target: 'es5',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css', '.svg'],
     alias: {
@@ -15,23 +18,14 @@ module.exports = {
   },
   module: {
     rules: [
-      // ES6 > ES5
-      {
-        test: /.js?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      },
 
       // TypeScript > ES6 JS
       {
-        test: /\.(ts|tsx)$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
+        rules: [{ 
+          test: /\.(ts|js)x?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/
+        }],
       },
 
       // SCSS > CSS
@@ -53,5 +47,9 @@ module.exports = {
         use: ['@svgr/webpack']
       }
     ]
-  }
+  },
+
+  plugins: [
+    new ForkTsCheckerWebpackPlugin()
+  ]
 };

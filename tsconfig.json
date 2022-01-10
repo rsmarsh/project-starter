@@ -6,14 +6,12 @@
       "Components*": ["src/components*"],
       "Assets*": ["src/assets*"]
     },
-    "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
-    "target": "es2018",
+    "module": "ESNext",
+    "target": "ESNext",
     "esModuleInterop": true,
-    "types": ["webpack-env", "node", "jest"],
     "jsx": "react",
-    "allowJs": true,
+    "types": ["webpack-env", "node", "jest"],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true
