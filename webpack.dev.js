@@ -6,6 +6,8 @@ const commonConfig = require('./webpack.common.js');
 module.exports = merge(commonConfig, {
   mode: 'development',
   devServer: {
+    host: 'local-ip',
+    open: true,
     hot: true
   },
   plugins: [

@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   // converts final ES6 > ES5
-  target: 'es5',
+  target: 'web',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css', '.svg'],
     alias: {
@@ -18,14 +18,15 @@ module.exports = {
   },
   module: {
     rules: [
-
       // TypeScript > ES6 JS
       {
-        rules: [{ 
-          test: /\.(ts|js)x?$/,
-          loader: 'babel-loader',
-          exclude: /node_modules/
-        }],
+        rules: [
+          {
+            test: /\.(ts|js)x?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/
+          }
+        ]
       },
 
       // SCSS > CSS
@@ -49,7 +50,5 @@ module.exports = {
     ]
   },
 
-  plugins: [
-    new ForkTsCheckerWebpackPlugin()
-  ]
+  plugins: [new ForkTsCheckerWebpackPlugin()]
 };
