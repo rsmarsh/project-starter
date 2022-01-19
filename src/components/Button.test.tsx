@@ -20,15 +20,7 @@ test('button should inherit provided class names', () => {
   const label = 'Button';
   const classNameList = 'button class-one class-two class-three';
 
-  render(
-    <Button
-      className={classNameList}
-      label={label}
-      onClick={() => {
-        /**/
-      }}
-    />
-  );
+  render(<Button className={classNameList} label={label} onClick={() => {}} />);
 
   expect(screen.getByRole('button').classList.toString()).toBe(classNameList);
 });
